@@ -1,10 +1,8 @@
-package testingexcellence.scenarios
-
-
+package testingexcellence.scenarios.accountControllerScenario
 
 import io.gatling.core.Predef.scenario
-import testingexcellence.requests.CreateUserRequest
 import testingexcellence.requests.GetTokenRequest
+import testingexcellence.requests.accountControllerRequest.CreateUserRequest
 
 object CreateUserScenario {
 
