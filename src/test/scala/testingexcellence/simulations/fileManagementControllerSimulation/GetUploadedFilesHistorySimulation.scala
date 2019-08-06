@@ -1,0 +1,12 @@
+package testingexcellence.simulations.fileManagementControllerSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.scenarios.fileManagementControllerScenario.GetUploadedFilesHistoryScenario
+import testingexcellence.config.Config.users
+
+class GetUploadedFilesHistorySimulation extends Simulation{
+
+  private val getUploadedFilesHistorySimulation = GetUploadedFilesHistoryScenario.getUploadedFilesHistoryScenario.inject(atOnceUsers(users))
+
+  setUp(getUploadedFilesHistorySimulation)
+}

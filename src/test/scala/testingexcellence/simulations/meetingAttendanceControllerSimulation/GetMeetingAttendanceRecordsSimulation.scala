@@ -1,0 +1,13 @@
+package testingexcellence.simulations.meetingAttendanceControllerSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.config.Config.users
+import testingexcellence.scenarios.meetingAttendanceControllerScenario.GetMeetingAttendanceRecordsScenario
+
+class GetMeetingAttendanceRecordsSimulation extends Simulation{
+
+  private val getMeetingAttendanceRecordsSimulation = GetMeetingAttendanceRecordsScenario.getMeetingAttendanceRecordsScenario.inject(atOnceUsers(users))
+
+  setUp(getMeetingAttendanceRecordsSimulation)
+
+}

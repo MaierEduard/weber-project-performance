@@ -1,0 +1,12 @@
+package testingexcellence.simulations.meetingAttendanceExpectationControllerSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.config.Config.users
+import testingexcellence.scenarios.meetingAttendanceExpectationControllerScenario.DeleteExpectationByIdScenario
+
+class DeleteExpectationByIdSimulation extends Simulation{
+
+  private val deleteExpectationByIdSimulation = DeleteExpectationByIdScenario.deleteExpectationByIdScenario.inject(atOnceUsers(users))
+
+  setUp(deleteExpectationByIdSimulation)
+}

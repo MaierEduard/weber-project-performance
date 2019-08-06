@@ -1,0 +1,15 @@
+package testingexcellence.simulations.counterCounterMeasureSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.config.Config.users
+import testingexcellence.scenarios.counterMeasureControllerScenario.GetLastModifiedCounterMeasureScenario
+
+class GetLastModifiedCounterMeasureSimulation extends Simulation{
+
+  private val getLastModifiedCounterMeasureSimulation = GetLastModifiedCounterMeasureScenario.getLastModifiedCounterMeasureScenario.inject(atOnceUsers(users))
+
+  setUp(getLastModifiedCounterMeasureSimulation)
+
+
+}
+

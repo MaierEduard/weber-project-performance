@@ -16,5 +16,10 @@ object GetTokenRequest {
 
 }
 
+//object GetIdRequest{
+//
+//    val get_id = http("Get id")
+//      .po
 
-//val headers_10 = Map("Content-Type" -> """application/json""", "API-KEY" -> "your_api_key", "Authorization Bearer" -> "auth_bearer")
+
+

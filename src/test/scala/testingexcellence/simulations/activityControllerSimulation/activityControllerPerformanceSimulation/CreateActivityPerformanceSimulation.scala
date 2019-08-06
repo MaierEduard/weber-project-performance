@@ -1,0 +1,12 @@
+package testingexcellence.simulations.activityControllerSimulation.activityControllerPerformanceSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.scenarios.activityControllerScenario.activityControllerPerformanceScenario.CreateActivityPerformanceScenario
+import testingexcellence.config.Config.users
+
+class CreateActivityPerformanceSimulation extends Simulation{
+
+  private val createActivityPerformanceSimulation = CreateActivityPerformanceScenario.createActivityPerformanceScenario.inject(atOnceUsers(users))
+
+  setUp(createActivityPerformanceSimulation)
+}

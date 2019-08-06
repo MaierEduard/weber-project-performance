@@ -1,0 +1,13 @@
+package testingexcellence.simulations.activityCodeControllerSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.config.Config.users
+import testingexcellence.scenarios.activityCodeControllerScenario.GetAllActivitySubCategoriesScenario
+
+class GetAllActivitySubCategoriesSimulation extends Simulation{
+
+  private val getAllActivitySubCategoriesSimulation = GetAllActivitySubCategoriesScenario.getAllActivitySubCategoriesScenario.inject(atOnceUsers(users))
+
+  setUp(getAllActivitySubCategoriesSimulation)
+
+}

@@ -1,0 +1,12 @@
+package testingexcellence.simulations.meetingAttendanceExpectationControllerSimulation
+
+import io.gatling.core.Predef._
+import testingexcellence.config.Config.users
+import testingexcellence.scenarios.meetingAttendanceExpectationControllerScenario.UpdateExpectationByIdScenario
+
+class UpdateExpectationByIdSimulation extends Simulation{
+
+  private val updateExpectationSimulation = UpdateExpectationByIdScenario.updateExpectationScenario.inject(atOnceUsers(users))
+
+  setUp(updateExpectationSimulation)
+}
